@@ -1,0 +1,17 @@
+{
+    "name": "ai-debate-room",
+    "version": "1.0.0",
+    "description": "여러 AI(GPT, Gemini, Claude)와 사람이 함께 토론하는 방을 만드는 앱",
+    "main": "server.js",
+    "engines": {
+          "node": ">=18"
+    },
+    "scripts": {
+          "start": "node server.js"
+    },
+    "dependencies": {
+          "express": "^4.19.2",
+          "uuid": "^9.0.1",
+          "dotenv": "^16.4.5"
+    }
+}
