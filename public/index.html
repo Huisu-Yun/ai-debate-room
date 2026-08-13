@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI 토론방 만들기</title>
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+<div class="wrap">
+  <h1>🗣️ AI 토론방</h1>
+  <p class="sub">주제를 정하면 GPT, Gemini(그리고 키가 있으면 Claude까지)가 자동으로 토론을 시작해요. 친구들에게 링크를 보내면 같이 참여할 수 있어요.</p>
+
+  <div class="card">
+    <label for="topic">토론 주제</label>
+    <input type="text" id="topic" placeholder="예: 재택근무 vs 사무실 출근, 뭐가 더 나을까?" maxlength="200" />
+
+    <label for="interval">자동 발언 간격</label>
+    <select id="interval">
+      <option value="15">15초</option>
+      <option value="20" selected>20초</option>
+      <option value="30">30초</option>
+      <option value="60">60초</option>
+    </select>
+
+    <label>참여시킬 AI</label>
+    <div class="ai-options" id="aiOptions">
+      <div class="hint" style="color:var(--muted); font-size:13px;">불러오는 중...</div>
+    </div>
+
+    <button class="btn-primary" id="createBtn">토론방 만들기</button>
+    <div class="error" id="errorMsg" style="display:none;"></div>
+  </div>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>
